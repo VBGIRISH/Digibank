@@ -92,10 +92,11 @@ img{
   margin-top: 2rem;
 }
 .ccontainer{
-  width:70%;
+   width:70%;
    margin-left:15%;
    margin-right:15%;
    margin-bottom:5%;
+   text-align: center;
 }
 .tinfo{
   padding-bottom: 20px;
@@ -156,15 +157,15 @@ img{
 }
 .tcontainer1{
   width: 60%;
-    height: 200px;
+    height: 250px;
 }
 .tinfo1{
   margin-top: 3%;
-  margin-left: 20%;
+  margin-left: 30%;
 }
 .tinfo2{
   margin-top: 3%;
-  margin-left: 20%;
+  margin-left: 30%;
 }
 .trans{
   margin-top: 80px;
@@ -172,13 +173,10 @@ img{
 }
 .theader1{
   text-align: center;
-  padding-right: 220px;
   font-family: 'Roboto Slab', serif;
 }
 .theader2{
-
     text-align: center;
-     padding-right: 220px;
     font-family: 'Roboto Slab', serif;
 }
 .viewheader{
@@ -186,7 +184,7 @@ img{
 }
 .tcontainer2{
   width: 60%;
-    height: 200px;
+    height: 230px;
 }
 /* .centreBox{
   margin-right: 50px;

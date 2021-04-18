@@ -1,22 +1,21 @@
 <%- include("header"); -%>
 
 <h2 class="cheading">Transaction History:</h2>
-<div class="ccontainer">
+<div class="container">
   <div class="table-responsive">
     <table align="center" class="table table-hover table-striped  table-bordered border=" 5" bordercolordark="red">
       <thead class="thead-dark">
-        <tr >
-          <th scope="col">Transaction ID</th>
+        <tr>
           <th scope="col">Sender</th>
           <th scope="col">Receiver</th>
           <th scope="col">Amount</th>
           <th scope="col">Time</th>
+          <th scope="col">Transaction ID</th>
         </tr>
       </thead>
       <tbody>
         <% for(let i = 0; i < data.length; i++) { %>
         <tr class="table-info">
-          <td scope="row"><%= data[i]._id %></td>
           <td><%= data[i].sender %></td>
           <td><%= data[i].receiver %></td>
           <td>
@@ -27,6 +26,7 @@
               <%= data[i].time %>
             </p>
           </td>
+            <td scope="row"><%= data[i]._id %></td>
         </tr>
         <%  } %>
       </tbody>
