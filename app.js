@@ -91,11 +91,15 @@ app.post("/processing", (req, res) => {
                 }
             });
                var date=new Date();
+               var options ={
+                   timeZone : "Asia/Kolkata"
+               }
+               var formattedDate = date.toLocaleString('en-US', options);
             const transaction = new Transaction({
               sender: sender,
               receiver: receiver,
               amount: amount,
-              time: date
+              time: formattedDate
             });
             transaction.save();
         res.render("success");
