@@ -1,0 +1,30 @@
+<%- include('header'); -%>
+
+<div class="container vcontainer ">
+  <h2 class="viewheader">Customer Information:</h2>
+  <div class="vinfo">
+    <div class="mb-3 row">
+      <lable class="col-sm-2 vname">Name:</lable>
+      <div class="col-sm-9">
+        <input class="vd" type="text" value="<%= customerDetails.name %>" readonly>
+        </div>
+     </div>
+     <div class="mb-3 row">
+       <label class="col-sm-2 vname">Email:</label>
+       <div class="col-sm-9">
+           <input class="vd" type="text" value="<%= customerDetails.email %>" readonly>
+         </div>
+       </div>
+       <div class="mb-3 row">
+         <label class="col-sm-2 vname">Balance:</label>
+         <div class="col-sm-9">
+         <input class="vd" type="text" value="<%= customerDetails.balance %>" readonly>
+           </div>
+         </div>
+    </div>
+    <form action="/transfer" method="post">
+      <button type="submit" name="id" value="<%= customerDetails._id %>" class="btn btn-primary vbutton">Transfer Money</button>
+    </form>
+</div>
+
+<%- include('footer'); -%>

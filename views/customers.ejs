@@ -1,0 +1,38 @@
+<%- include("header"); -%>
+
+
+ <h2 class="cheading">Customers Details:</h2>
+<div class = "ccontainer">
+    <div class = "table-responsive " style="overflow-x:auto;">
+        <table align="center" class = "table table-hover table-striped table-dark table-bordered border="5" bordercolordark="red">
+          <thead>
+              <tr class = "thread-dark">
+                  <th scope = "col">Acc.No.</th>
+                  <th scope = "col">Name</th>
+                  <th scope = "col">E-Mail</th>
+                  <th scope = "col">Bank Balance</th>
+                  <th></th>
+              </tr>
+          </thead>
+          <tbody>
+           <% for(let i = 0; i < data.length; i++) { %>
+                <tr class = "thread-dark">
+                    <td scope = "row"><%= data[i]._id %></td>
+                    <td><%= data[i].name %></td>
+                    <td><%= data[i].email %></td>
+                    <td>
+                        <p><%= "$"+data[i].balance %></p>
+                    </td>
+                    <td>
+                        <form action="/customers/<%= data[i]._id %>" method="get">
+                            <button type="submit" class="btn btn-primary">View</button>
+                        </form>
+                    </td>
+                </tr>
+           <%  } %>
+          </tbody>
+        </table>
+    </div>
+</div>
+
+<%- include("footer"); -%>

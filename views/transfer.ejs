@@ -1,0 +1,59 @@
+<%- include('header'); -%>
+
+<form action="/processing" method="post">
+<div class="trans">
+    <div class="row main-items">
+      <div class="tcontainer1">
+        <h2 class="theader1">Sender:</h2>
+        <div class="tinfo1">
+          <div class="mb-3 row">
+            <lable class="col-sm-2 vname">Name:</lable>
+            <div class="col-sm-10">
+              <input class="vna" name="sender" type="text" value="<%= sender.name %>" readonly>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label class="col-sm-2 vname">Balance:</label>
+            <div class="col-sm-10">
+              <input class="vbal" type="text" value="<%= sender.balance %>" readonly>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="tcontainer2">
+      <h2 class="theader2">Receiver:</h2>
+      <div class="tinfo2">
+        <div class="mb-3 row">
+          <lable class="col-sm-2 vname">Name:</lable>
+          <div class="col-sm-10">
+            <select class="nameButton" name="receiver">
+              <% for(let i = 0; i < allData.length; i++) { %>
+              <% if(sender.name != allData[i].name) { %>
+              <option name="receiver"><%= allData[i].name %></option>
+              <% } %>
+              <% } %>
+
+            </select>
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-sm-2 vname">Amount:</label>
+          <div class="col-sm-10">
+            <input class="amountButton" name="amount" type="number" min=0 required>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="tbc">
+  <button type="submit" class="btn btn-primary tbutton btn-lg">Transfer Money</button>
+</div>
+</form>
+
+
+
+<%- include('footer'); -%>

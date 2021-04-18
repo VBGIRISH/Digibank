@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container-fluid{
+  padding: 0;
+  margin:0;
+}
+.navbar{
+  padding: 0.5rem 1rem;
+  position: relative;
+  align-items: center;
+}
+
+h2{
+  padding-left: 10rem;
+  left: 100px;
+}
+.copyright{
+  color:#EAF6F6;
+  font-size: 0.75rem;
+  padding: 20px 0px;
+}
+#middle-container{
+
+}
+#bottom-container{
+  background-color: #242424;
+  text-align: center;
+  padding: 1%;
+}
+
+.footer-link{
+  margin: 1rem;
+  padding-top: 40px;
+}
